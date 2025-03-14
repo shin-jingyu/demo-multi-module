@@ -13,6 +13,8 @@ repositories {
 
 dependencies {
     implementation(project(":module-board"))
+    implementation(project(":module-core"))
+    implementation(project(":module-common"))
     implementation(project(":module-contracts"))
     implementation("org.springframework.boot:spring-boot-starter")
     testImplementation("org.springframework.boot:spring-boot-starter-test")

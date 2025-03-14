@@ -2,6 +2,9 @@ plugins {
     id("java")
 }
 
+group = "me.nettee"
+version = "unspecified"
+
 repositories {
     mavenCentral()
 }
