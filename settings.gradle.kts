@@ -24,16 +24,9 @@ rootProject.name = "demo-multi-module"
 val modules = mapOf(
     "module-board" to listOf(
         "module-board",
-        "module-board:board-web-adapter",
-        "module-board:board-application",
         "module-board:board-api",
-        "module-board:board-driving-adapters",
-        "module-board:board-driven-adapters"
-    ),
-    "module-board:board-driving-adapters" to listOf(
-        "module-board:board-driving-adapters:board-web-adapter"
-    ),
-    "module-board:board-driven-adapters" to listOf(
+        "module-board:board-application",
+        "module-board:board-driving-adapters:board-web-adapter",
         "module-board:board-driven-adapters:board-rdb-adapter"
     ),
     "module-contracts" to listOf("module-contracts"),
