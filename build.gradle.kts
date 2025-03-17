@@ -1,16 +1,26 @@
 plugins {
-    id("java")
+    id("org.springframework.boot") version "3.4.3" apply false
+    id("io.spring.dependency-management") version "1.1.7" apply false
 }
 
 
-allprojects{
+subprojects {
+    apply(plugin = "java")
+    apply(plugin = "org.springframework.boot")
+    apply(plugin = "io.spring.dependency-management")
+
     group = "me.nettee"
 
-    tasks.withType<JavaCompile>{
-        sourceCompatibility = JavaVersion.VERSION_21.toString()
-        targetCompatibility = JavaVersion.VERSION_21.toString()
-    }
     repositories {
         mavenCentral()
     }
+
+//    tasks.withType<BootJar>{
+//        enabled = false
+//    }
+//
+//    tasks.withType<Jar>{
+//        enabled = true
+//    }
+
 }

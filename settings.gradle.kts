@@ -1,36 +1,26 @@
-rootProject.name = "demo-multi-module"
+rootProject.name = "blolet"
 
+include("monolithic")
+include("core")
+include("core:jpa-core")
+include("common")
+include("services:board")
+include("services:board:api")
+include("services:board:api:domain")
+include("services:board:api:exception")
+include("services:board:application")
+include("services:board:driven-rdb-adapter")
+include("services:board:driving-web-adapter")
 
-//include("module-board")
-//include("module-contracts")
-//include("module-monolithic")
-//include("module-common")
-//include("module-core")
+include("core:jpa-core")
+include("services:board")
+include("common")
 
-//include("module-board:board-web-adapter")
-//include("module-board:board-application")
-//include("module-board:board-api")
-//include("module-board:board-driving-adapters")
-//include("module-board:board-driving-adapters:board-web-adapter")
-//include("module-board:board-driven-adapters")
-//include("module-board:board-driven-adapters:board-rdb-adapter")
-//findProject(":module-board:board-driving-adapters:board-web-adapter")?.name = "board-web-adapter"
-//findProject(":module-board:board-driven-adapters:board-rdb-adapter")?.name = "board-rdb-adapter"
-//findProject(":module-board:board-driven-adapters")?.name = "board-driven-adapters"
-//findProject(":module-board:board-api")?.name = "board-api"
-//findProject(":module-board:board-driving-adapters")?.name = "board-driving-adapters"
-//findProject(":module-board:board-application")?.name = "board-application"
-//findProject(":module-board:board-web-adapter")?.name = "board-web-adapter"
-val modules = mapOf(
-    "module-board" to listOf(
-        "module-board",
-        "module-board:board-api",
-        "module-board:board-application",
-        "module-board:board-driving-adapters:board-web-adapter",
-        "module-board:board-driven-adapters:board-rdb-adapter"
-    ),
-    "module-contracts" to listOf("module-contracts"),
-    "module-monolithic" to listOf("module-monolithic"),
-    "module-common" to listOf("module-common"),
-    "module-core" to listOf("module-core")
-).flatMap { it.value }.forEach(::include)
+findProject(":services:board")?.projectDir = file("services/board")
+findProject(":services:board:api")?.projectDir = file("services/board/api")
+findProject(":services:board:api:domain")?.projectDir = file("services/board/api/domain")
+findProject(":services:board:api:exception")?.projectDir = file("services/board/api/exception")
+findProject(":services:board:application")?.projectDir = file("services/board/application")
+findProject(":services:board:driven-rdb-adapter")?.projectDir = file("services/board/driven-rdb-adapter")
+findProject(":services:board:driving-web-adapter")?.projectDir = file("services/board/driving-web-adapter")
+
