@@ -50,7 +50,10 @@ public class BoardCommandAdapter implements BoardCommandPort {
         existBoard.prepareUpdate()
                 .title(board.getTitle())
                 .content(board.getContent())
-                .status(BoardEntityStatus.valueOf(board.getStatus()))
+//                .status(BoardEntityStatus.valueOf(board.getStatus()))
+                .status(
+                        board.getStatus() != null ? BoardEntityStatus.valueOf(board.getStatus()) : existBoard.getStatus()
+                )
                 .update();
 
         return boardEntityMapper.toDomain(boardJpaRepository.save(existBoard));

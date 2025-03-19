@@ -7,8 +7,7 @@ repositories {
 }
 
 dependencies {
-    implementation(project(":services:board:api:exception"))
-    implementation(project(":services:board:api:domain"))
+    implementation(project(":services:board:api"))
     implementation(project(":common"))
 
     // spring

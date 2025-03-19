@@ -12,7 +12,7 @@ repositories {
 
 dependencies {
     implementation(project(":services:board:application"))
-    implementation(project(":services:board:api:domain"))
+    implementation(project(":services:board:api"))
 
     // spring
     implementation("org.springframework.boot:spring-boot-starter-web")
