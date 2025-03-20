@@ -1,14 +1,5 @@
-plugins {
-    id("java")
-}
-
-repositories {
-    mavenCentral()
-}
-
 dependencies {
-    implementation(project(":services:board:api"))
-    implementation(project(":common"))
+    api(project(":board:api"))
 
     // spring
     implementation("org.springframework:spring-context")

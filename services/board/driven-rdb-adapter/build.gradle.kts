@@ -7,10 +7,8 @@ repositories {
 }
 
 dependencies {
-    implementation(project(":services:board:api"))
-    implementation(project(":services:board:application"))
-    implementation(project(":core:jpa-core"))
-    implementation(project(":common"))
+    api(project(":board:application"))
+    api(project(":me:nettee:jpa-core"))
 
     // spring
     implementation("org.springframework:spring-context")

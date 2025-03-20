@@ -1,14 +1,5 @@
-plugins {
-    id("java")
-}
-
-
-repositories {
-    mavenCentral()
-}
-
 dependencies {
-    implementation(project(":services:board:api:domain"))
+    api(project(":board:domain"))
     // lombok
     compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")

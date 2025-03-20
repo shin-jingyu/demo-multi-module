@@ -1,11 +1,3 @@
-plugins {
-    id("java")
-}
-
-repositories {
-    mavenCentral()
-}
-
 dependencies {
     // lombok
     compileOnly("org.projectlombok:lombok")
