@@ -14,7 +14,6 @@ java {
 
 
 dependencies {
-    implementation(project(":me:nettee:jpa-core"))
     implementation(project(":board"))
 
     implementation("org.springframework.boot:spring-boot-starter-web")
