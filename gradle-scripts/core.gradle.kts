@@ -1,7 +1,7 @@
 val coreDir = "${rootProject.projectDir}/core"
 
 include(
-    ":me:nettee:jpa-core"
+    ":jpa-core"
 )
 
-project(":me:nettee:jpa-core").projectDir = file("$coreDir/jpa-core")
+project(":jpa-core").projectDir = file("$coreDir/jpa-core")
